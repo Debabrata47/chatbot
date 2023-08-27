@@ -4,8 +4,8 @@ const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
-const server = http.createServer(app);
-const io = socketIO(server);
+
+
 
 const bucketName = 'audio-test77';
 const jsonKey = 'transcript1.json';
@@ -13,6 +13,8 @@ const jsonKey = 'transcript1.json';
 const app = express();
 const port = process.env.PORT || 3000;
 
+const server = http.createServer(app);
+const io = socketIO(server);
 const s3Client = new S3Client({
     region: "ap-south-1",
     credentials: {
