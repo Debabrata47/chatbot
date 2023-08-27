@@ -8,8 +8,6 @@ const AWS = require('aws-sdk');
 const server = http.createServer(app);
 const io = socketIO(server);
 
-const express = require('express');
-
 const bucketName = 'audio-test77';
 const jsonKey = 'transcript1.json';
 
