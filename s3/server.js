@@ -4,7 +4,6 @@ const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
-const AWS = require('aws-sdk');
 const server = http.createServer(app);
 const io = socketIO(server);
 
